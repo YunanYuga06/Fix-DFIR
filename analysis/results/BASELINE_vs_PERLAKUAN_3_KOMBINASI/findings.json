@@ -1,0 +1,59 @@
+[
+  {
+    "evidence": [
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-BASELINE-01",
+    "severity": "INFORMATIONAL",
+    "statement": "Baseline cross-layer ODO integrity rate was 100.000%; all-fields cross-layer rate was 100.000%.",
+    "title": "Baseline cross-layer integrity"
+  },
+  {
+    "evidence": [
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-BASELINE-02",
+    "severity": "INFORMATIONAL",
+    "statement": "Raspberry Pi read availability was 100.000% and OpenPLC read availability was 100.000%.",
+    "title": "Baseline acquisition availability"
+  },
+  {
+    "evidence": [
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-BASELINE-03",
+    "severity": "INFORMATIONAL",
+    "statement": "OpenPLC logic consistency rate was 100.000%; valve output agreement with the legitimate source was 100.000%.",
+    "title": "Baseline controller behaviour"
+  },
+  {
+    "evidence": [
+      "control_logic_analysis.csv",
+      "paired_cross_layer_analysis.csv"
+    ],
+    "finding_id": "F-P1-02",
+    "severity": "INFORMATIONAL",
+    "statement": "Controller operational impact was observed in 0 record(s). This metric compares the actual valve output with the output expected from the legitimate Raspberry Pi source.",
+    "title": "Controller impact on valve output"
+  },
+  {
+    "evidence": [
+      "control_logic_analysis.csv"
+    ],
+    "finding_id": "F-P1-03",
+    "severity": "INFORMATIONAL",
+    "statement": "PLC logic consistency was 100.000%. A high rate means OpenPLC correctly applied its control rules to the value it received, even when that value differed from the legitimate source.",
+    "title": "OpenPLC controller logic remained internally consistent"
+  },
+  {
+    "evidence": [
+      "availability_analysis.csv"
+    ],
+    "finding_id": "F-P1-04",
+    "severity": "INFORMATIONAL",
+    "statement": "Raspberry Pi read availability was 87.273%; OpenPLC read availability was 55.455%. Availability of acquisition can remain high while process-data integrity is violated.",
+    "title": "Acquisition availability during treatment"
+  }
+]

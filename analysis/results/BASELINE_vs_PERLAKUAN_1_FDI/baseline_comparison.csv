@@ -1,0 +1,11 @@
+metric,baseline_value,treatment_value,treatment_minus_baseline,unit
+Source encoding integrity - all fields,100.0,100.0,0.0,%
+Cross-layer ODO integrity,100.0,55.714,-44.286,%
+Cross-layer all-fields integrity,100.0,55.714,-44.286,%
+PLC internal ODO consistency,100.0,100.0,0.0,%
+PLC controller logic consistency,100.0,100.0,0.0,%
+Valve output match against legitimate source,100.0,55.714,-44.286,%
+Raspberry Pi acquisition availability,100.0,100.0,0.0,%
+OpenPLC acquisition availability,100.0,100.0,0.0,%
+Paired collection rate,100.0,100.0,0.0,%
+Observed controller impact records,0,31,31.0,records

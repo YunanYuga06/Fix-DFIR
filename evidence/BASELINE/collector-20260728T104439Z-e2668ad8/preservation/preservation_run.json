@@ -1,0 +1,18 @@
+{
+  "analysis_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\analysis",
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8",
+  "collector_session_id": "collector-20260728T104439Z-e2668ad8",
+  "created_at_utc": "2026-07-28T10:55:58.194Z",
+  "experiment_id": "EXP-20260728T104439Z-3e25d72e",
+  "master_file_count": 8,
+  "master_read_only": true,
+  "master_verification": "MATCH",
+  "operator": "Mr. Y",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "raw_file_count": 8,
+  "scenario": "BASELINE",
+  "script": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\preservation\\preserve_case.py",
+  "source_verification": "MATCH",
+  "working_file_count": 8,
+  "working_verification": "MATCH"
+}

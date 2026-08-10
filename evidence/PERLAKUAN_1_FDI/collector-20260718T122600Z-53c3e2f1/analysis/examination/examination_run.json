@@ -1,0 +1,18 @@
+{
+  "arguments": {
+    "allow_no_pcap": false,
+    "append_custody": true,
+    "force": false,
+    "modbus_port": 502,
+    "operator": "Yunan Yuga Pratama"
+  },
+  "completed_at_utc": "2026-07-18T20:21:26.883Z",
+  "host": "Youma-PC",
+  "operator": "Yunan Yuga Pratama",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "run_id": "examination-20260718T202126Z-a4e5742f",
+  "script_path": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1\\analysis\\examine_case.py",
+  "script_sha256": "9df15168e4bf815d1186074ec2fa01031e52880bc5f4566a49f3279c6827d668",
+  "started_at_utc": "2026-07-18T20:21:26.734Z",
+  "status": "READY_FOR_ANALYSIS"
+}

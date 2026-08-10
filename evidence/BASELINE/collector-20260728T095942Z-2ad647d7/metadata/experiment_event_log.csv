@@ -1,0 +1,2 @@
+event_timestamp,experiment_id,collector_session_id,event_type,experiment_phase,source,note
+2026-07-28T09:59:42.795Z,EXP-20260728T095942Z-fddd7514,collector-20260728T095942Z-2ad647d7,EXPERIMENT_PHASE_CHANGED,BASELINE,command_line,

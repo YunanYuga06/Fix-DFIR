@@ -1,0 +1,15 @@
+{
+  "capture_files": [
+    {
+      "relative_path": "baseline_wifi_adapter.pcapng",
+      "sha256": "f8b7e97864fd6afebea641c5f49eb1908da1b61832e107ed512b7e34c019c577",
+      "size_bytes": 376316
+    }
+  ],
+  "capture_filter": "tcp port 502",
+  "capture_interface": "Wi-Fi",
+  "capture_role": "Primary evidence of normal Modbus communication",
+  "created_at_utc": "2026-07-18T13:44:46.023Z",
+  "note": "Interface, capture filter, dan role berasal dari parameter operator; script tidak menebaknya dari isi PCAP.",
+  "scenario": "BASELINE"
+}

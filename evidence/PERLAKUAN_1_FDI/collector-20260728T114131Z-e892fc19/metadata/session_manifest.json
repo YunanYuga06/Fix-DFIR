@@ -1,0 +1,72 @@
+{
+  "collection": {
+    "http_timeout_seconds": 3.0,
+    "max_cycles": null,
+    "modbus_timeout_seconds": 3.0,
+    "phase_file": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\experiment_phase.json",
+    "poll_interval_seconds": 1.0
+  },
+  "collector_completed_at": "2026-07-28T11:42:01.589Z",
+  "collector_host": "Youma-PC",
+  "collector_schema_version": "4.0-pamsimas-thingsboard-http-proxy",
+  "collector_script": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\collector_updated.py",
+  "collector_script_sha256": "c1aedcf0b1587202e0a69d0144da35a831f13be80d3dc72b99cd48ef7d114be7",
+  "collector_session_id": "collector-20260728T114131Z-e892fc19",
+  "collector_started_at": "2026-07-28T11:41:31.313Z",
+  "duration_clock": "time.monotonic",
+  "experiment_id": "EXP-P1-01",
+  "framework_basis": {
+    "NISTIR_8428": "OT routine collection, synchronized timeline, process monitoring, and baseline comparison.",
+    "NIST_SP_800_86": "Controlled collection, provenance, acquisition metadata, and evidence integrity verification."
+  },
+  "manifest_schema_version": "1.0",
+  "ntp_reference": "Collector Laptop Local NTP Server",
+  "openplc": {
+    "acquisition_method": "Modbus TCP read-only",
+    "coil_count": 3,
+    "coil_map": {
+      "coil_0": "valve_command",
+      "coil_1": "abnormal_usage",
+      "coil_2": "payment_blocked"
+    },
+    "coil_start": 0,
+    "holding_register_count": 10,
+    "holding_register_start": 1024,
+    "ip": "192.168.21.209",
+    "port": 502,
+    "register_map": {
+      "HR1024": "odo_meter_from_pi",
+      "HR1025": "flow_rate_x1000_from_pi",
+      "HR1026": "volume_x10000_from_pi",
+      "HR1027": "payment_status_from_pi",
+      "HR1028": "source_sequence_from_pi",
+      "HR1029": "observed_valve_raw_from_pi",
+      "HR1030": "node_id_from_pi",
+      "HR1031": "odo_meter_processed",
+      "HR1032": "process_state",
+      "HR1033": "valve_reason"
+    },
+    "scaling": {
+      "flow_rate": "raw / 1000 = L/min",
+      "volume": "raw / 10000 = litre"
+    },
+    "unit_id": 1
+  },
+  "pcap_reference": null,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "preservation_note": "SHA-256 calculated after acquisition files are closed. Create a separate read-only master evidence and working copy before analysis.",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "raspberry_pi": {
+    "acquisition_method": "HTTP GET JSON read-only",
+    "ip": "192.168.21.217",
+    "local_file_fallback": false,
+    "path": "/state",
+    "port": 5020,
+    "state_url": "http://192.168.21.217:5020/state"
+  },
+  "scenario": "PERLAKUAN_1_FDI",
+  "scope_note": "Technical adaptation for a laboratory testbed; not a certification of NIST compliance.",
+  "session_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260728T114131Z-e892fc19",
+  "time_format": "ISO 8601 UTC",
+  "total_collection_cycles": 30
+}

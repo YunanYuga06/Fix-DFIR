@@ -1,0 +1,12 @@
+
+2026-07-18T20:14:11.557Z [FATAL] FileNotFoundError: Tidak ditemukan examination untuk BASELINE di C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260718T122308Z-8dba7023\evidence\BASELINE
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260718T122308Z-8dba7023\analysis\analize.py", line 1153, in main
+    else find_latest_examination(dfir_root, "BASELINE")
+         ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260718T122308Z-8dba7023\analysis\analize.py", line 298, in find_latest_examination
+    raise FileNotFoundError(
+        f"Tidak ditemukan examination untuk {scenario_folder} di {base}"
+    )
+FileNotFoundError: Tidak ditemukan examination untuk BASELINE di C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260718T122308Z-8dba7023\evidence\BASELINE

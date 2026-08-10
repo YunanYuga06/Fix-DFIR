@@ -1,0 +1,5 @@
+event_timestamp,experiment_id,collector_session_id,event_type,experiment_phase,source,note
+2026-07-18T12:26:00.398Z,EXP-P1-01,collector-20260718T122600Z-53c3e2f1,EXPERIMENT_PHASE_CHANGED,PRE_ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,Collection kondisi normal sebelum FDI
+2026-07-18T12:26:25.408Z,EXP-P1-01,collector-20260718T122600Z-53c3e2f1,EXPERIMENT_PHASE_CHANGED,ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,Unauthorized write nilai 1000 ke HR1024 dimulai
+2026-07-18T12:26:58.423Z,EXP-P1-01,collector-20260718T122600Z-53c3e2f1,EXPERIMENT_PHASE_CHANGED,RECOVERY,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,FDI berhenti; menunggu write sah Raspberry Pi
+2026-07-18T12:27:03.424Z,EXP-P1-01,collector-20260718T122600Z-53c3e2f1,EXPERIMENT_PHASE_CHANGED,POST_RECOVERY,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,Konsistensi lintas layer kembali stabil

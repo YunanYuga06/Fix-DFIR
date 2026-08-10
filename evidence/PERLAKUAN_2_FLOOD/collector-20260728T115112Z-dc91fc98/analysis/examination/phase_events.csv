@@ -1,0 +1,4 @@
+﻿event_timestamp,experiment_id,collector_session_id,event_type,experiment_phase,source,note,_source_csv_row
+2026-07-28T11:51:12.500Z,EXP-P2-01,collector-20260728T115112Z-dc91fc98,EXPERIMENT_PHASE_CHANGED,PRE_ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,P2 pre-attack observation,2
+2026-07-28T11:51:49.508Z,EXP-P2-01,collector-20260728T115112Z-dc91fc98,EXPERIMENT_PHASE_CHANGED,ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,FLOOD AND RST TCP,3
+2026-07-28T11:52:35.175Z,EXP-P2-01,collector-20260728T115112Z-dc91fc98,EXPERIMENT_PHASE_CHANGED,POST_RECOVERY,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,P2 stable post-recovery observation,4

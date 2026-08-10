@@ -1,0 +1,136 @@
+{
+  "analysis_run_id": "analysis-20260728T225210Z-1489a445",
+  "analysis_schema_version": "1.0-pamsimas-thingsboard-analysis",
+  "architecture": "ThingsBoard-shaped telemetry -> Raspberry Pi -> Modbus/TCP -> OpenPLC -> ValveCommand",
+  "claim_boundary": "Conclusions apply to this laboratory testbed and evaluated files; not universal validation for all PAMSIMAS/OT environments.",
+  "coil_mapping": {
+    "Coil0": "ValveCommand",
+    "Coil1": "AbnormalUsage",
+    "Coil2": "PaymentBlocked"
+  },
+  "collector_host": "Youma-PC",
+  "completed_at_utc": "2026-07-28T22:52:12.152Z",
+  "configured_treatment": {
+    "abnormal_threshold": 100,
+    "attack_value": 1000,
+    "correlation_window_seconds": 2.5,
+    "stable_records": 3,
+    "target_register": 1024
+  },
+  "findings": [
+    {
+      "evidence": [
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-BASELINE-01",
+      "severity": "INFORMATIONAL",
+      "statement": "Baseline cross-layer ODO integrity rate was 100.000%; all-fields cross-layer rate was 100.000%.",
+      "title": "Baseline cross-layer integrity"
+    },
+    {
+      "evidence": [
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-BASELINE-02",
+      "severity": "INFORMATIONAL",
+      "statement": "Raspberry Pi read availability was 100.000% and OpenPLC read availability was 100.000%.",
+      "title": "Baseline acquisition availability"
+    },
+    {
+      "evidence": [
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-BASELINE-03",
+      "severity": "INFORMATIONAL",
+      "statement": "OpenPLC logic consistency rate was 100.000%; valve output agreement with the legitimate source was 100.000%.",
+      "title": "Baseline controller behaviour"
+    },
+    {
+      "evidence": [
+        "control_logic_analysis.csv",
+        "paired_cross_layer_analysis.csv"
+      ],
+      "finding_id": "F-P1-02",
+      "severity": "INFORMATIONAL",
+      "statement": "Controller operational impact was observed in 0 record(s). This metric compares the actual valve output with the output expected from the legitimate Raspberry Pi source.",
+      "title": "Controller impact on valve output"
+    },
+    {
+      "evidence": [
+        "control_logic_analysis.csv"
+      ],
+      "finding_id": "F-P1-03",
+      "severity": "INFORMATIONAL",
+      "statement": "PLC logic consistency was 100.000%. A high rate means OpenPLC correctly applied its control rules to the value it received, even when that value differed from the legitimate source.",
+      "title": "OpenPLC controller logic remained internally consistent"
+    },
+    {
+      "evidence": [
+        "availability_analysis.csv"
+      ],
+      "finding_id": "F-P1-04",
+      "severity": "INFORMATIONAL",
+      "statement": "Raspberry Pi read availability was 87.273%; OpenPLC read availability was 55.455%. Availability of acquisition can remain high while process-data integrity is violated.",
+      "title": "Acquisition availability during treatment"
+    }
+  ],
+  "inputs": {
+    "baseline_openplc_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv",
+    "baseline_raspi_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+    "baseline_session": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8",
+    "network_write_event_count": 0,
+    "treatment_openplc_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_3_KOMBINASI\\collector-20260728T130713Z-41eacbc5\\raw\\openplc_evidence.csv",
+    "treatment_raspi_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_3_KOMBINASI\\collector-20260728T130713Z-41eacbc5\\raw\\raspi_evidence.csv",
+    "treatment_session": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_3_KOMBINASI\\collector-20260728T130713Z-41eacbc5"
+  },
+  "limitations": [
+    "The current source is ThingsBoard-shaped hardcoded/mock telemetry until the STM32 and live ThingsBoard integration are completed.",
+    "The Valve field from ThingsBoard is treated as observed field feedback; ValveCommand is the OpenPLC controller output.",
+    "Collector polling may be faster than sender publication, so duplicate source_sequence observations are expected and are not automatically classified as replay.",
+    "Acquisition availability does not by itself prove physical water-service availability.",
+    "No parsed Modbus write-event file was found; the analysis does not independently confirm FC06/FC16 at the network layer."
+  ],
+  "operator": "Mr. Y",
+  "record_counts": {
+    "attack_observation_count": 0,
+    "baseline_paired_records": 37,
+    "treatment_paired_records": 110
+  },
+  "recovery": {
+    "attack_observation_count": 0,
+    "configured_attack_value": 1000,
+    "first_attack_value_observed_utc": null,
+    "first_network_write_utc": null,
+    "first_normal_observation_utc": null,
+    "last_attack_observation_to_first_normal_seconds": null,
+    "last_attack_observation_to_stable_confirmation_seconds": null,
+    "last_attack_value_observed_utc": null,
+    "last_network_write_to_first_normal_seconds": null,
+    "last_network_write_to_stable_confirmation_seconds": null,
+    "last_network_write_utc": null,
+    "network_evidence_available": false,
+    "network_to_first_attack_observation_seconds": null,
+    "scenario": "PERLAKUAN_3_KOMBINASI",
+    "stable_record_requirement": 3,
+    "stable_recovery_confirmed_utc": null,
+    "stable_recovery_start_utc": null
+  },
+  "register_mapping": {
+    "HR1024": "ODO Meter",
+    "HR1025": "Flow Rate x1000",
+    "HR1026": "Volume x10000",
+    "HR1027": "Payment Status",
+    "HR1028": "Source Sequence",
+    "HR1029": "Observed Valve Raw",
+    "HR1030": "Node ID",
+    "HR1031": "ODO Meter Processed",
+    "HR1032": "Process State",
+    "HR1033": "Valve Reason"
+  },
+  "scope": "BASELINE vs PERLAKUAN_3_KOMBINASI",
+  "script_path": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\analysis\\analyze_testbed.py",
+  "script_sha256": "44473a3b7c05fb15674e745a6de52d7b3d28a3b76f5860585a23356c5f544a8c",
+  "started_at_utc": "2026-07-28T22:52:10.970Z"
+}

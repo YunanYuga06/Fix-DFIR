@@ -1,0 +1,51 @@
+{
+  "collection": {
+    "http_timeout_seconds": 3.0,
+    "max_cycles": null,
+    "modbus_timeout_seconds": 3.0,
+    "phase_file": null,
+    "poll_interval_seconds": 1.0
+  },
+  "collector_completed_at": "2026-07-18T12:24:17.817Z",
+  "collector_host": "Youma-PC",
+  "collector_schema_version": "3.2-http-proxy-only",
+  "collector_script": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\collector.py",
+  "collector_script_sha256": "99346b4e24c56d55ab9143b802d65d60a637d119544376c58a8ce43288b3810e",
+  "collector_session_id": "collector-20260718T122308Z-8dba7023",
+  "collector_started_at": "2026-07-18T12:23:08.573Z",
+  "duration_clock": "time.monotonic",
+  "experiment_id": "EXP-20260718T122308Z-5caf4c9b",
+  "framework_basis": {
+    "NISTIR_8428": "OT routine collection, synchronized timeline, process monitoring, and baseline comparison.",
+    "NIST_SP_800_86": "Controlled collection, provenance, acquisition metadata, and evidence integrity verification."
+  },
+  "manifest_schema_version": "1.0",
+  "ntp_reference": "Collector Laptop Local NTP Server",
+  "openplc": {
+    "acquisition_method": "Modbus TCP read-only",
+    "coil_count": 3,
+    "coil_start": 0,
+    "holding_register_count": 6,
+    "holding_register_start": 1024,
+    "ip": "192.168.100.93",
+    "port": 502,
+    "unit_id": 1
+  },
+  "pcap_reference": null,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "preservation_note": "SHA-256 calculated after acquisition files are closed. Create a separate read-only master evidence and working copy before analysis.",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "raspberry_pi": {
+    "acquisition_method": "HTTP GET JSON read-only",
+    "ip": "192.168.100.122",
+    "local_file_fallback": false,
+    "path": "/state",
+    "port": 5020,
+    "state_url": "http://192.168.100.122:5020/state"
+  },
+  "scenario": "BASELINE",
+  "scope_note": "Technical adaptation for a laboratory testbed; not a certification of NIST compliance.",
+  "session_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260718T122308Z-8dba7023",
+  "time_format": "ISO 8601 UTC",
+  "total_collection_cycles": 69
+}

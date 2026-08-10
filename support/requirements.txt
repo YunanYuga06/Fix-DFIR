@@ -1,0 +1,8 @@
+# Dependency Python eksternal yang digunakan oleh collector.py.
+# Versi mayor dibatasi agar kompatibilitas API ModbusTcpClient tetap terkontrol.
+pymodbus>=3.8,<4.0
+
+# Script phase_control.py, preserve_case.py, examine_case.py,
+# analyze_testbed.py, serta Perlakuan 2 menggunakan Python standard library.
+# Wireshark, Npcap, dumpcap/tshark, dan OpenPLC merupakan dependency sistem,
+# sehingga tidak diinstal melalui pip.

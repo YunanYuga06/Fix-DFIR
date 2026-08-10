@@ -1,0 +1,15 @@
+{
+  "capture_files": [
+    {
+      "relative_path": "perlakuan1.pcapng",
+      "sha256": "7d16431ca7a5b605bfcd061e3d18d2a4ad36eb0c8cc9e98599b04196b73b3a1c",
+      "size_bytes": 611480
+    }
+  ],
+  "capture_filter": "tcp port 502",
+  "capture_interface": "INTERFACE_YANG_DIGUNAKAN",
+  "capture_role": "Unauthorized Modbus FC06 write to HR1024 evidence",
+  "created_at_utc": "2026-07-28T22:07:07.378Z",
+  "note": "Interface, capture filter, dan role berasal dari parameter operator; script tidak menebaknya dari isi PCAP.",
+  "scenario": "PERLAKUAN_1_FDI"
+}

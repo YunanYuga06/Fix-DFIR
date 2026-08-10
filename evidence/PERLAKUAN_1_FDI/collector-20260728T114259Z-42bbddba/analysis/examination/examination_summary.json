@@ -1,0 +1,64 @@
+{
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260728T114259Z-42bbddba",
+  "collector_session_id": "collector-20260728T114259Z-42bbddba",
+  "completed_at_utc": "2026-07-28T22:14:12.213Z",
+  "examination_schema_version": "1.0",
+  "examination_status": "READY_FOR_ANALYSIS",
+  "experiment_id": "EXP-P1-01",
+  "factual_checks": {
+    "cross_layer_match_false": 0,
+    "cross_layer_match_true": 0,
+    "openplc_acquisition_success": 70,
+    "plc_internal_match_false": 0,
+    "plc_internal_match_true": 0,
+    "raspi_acquisition_success": 70,
+    "source_match_false": 0,
+    "source_match_true": 0
+  },
+  "input": {
+    "master_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260728T114259Z-42bbddba\\master",
+    "pcap_files": [
+      "raw/perlakuan1.pcapng"
+    ],
+    "working_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260728T114259Z-42bbddba\\working",
+    "working_verified_against_master": true
+  },
+  "method_note": "Output ini merupakan hasil Examination/derived evidence. Kesimpulan insiden dibuat pada tahap Analysis.",
+  "operator": "Mr. Y",
+  "pcap": {
+    "fc06_request_count": 75,
+    "fc06_response_count": 77,
+    "file_count": 1,
+    "modbus_event_count": 575,
+    "packet_count": 2095,
+    "write_event_count": 170
+  },
+  "records": {
+    "candidate_timeline_events": 244,
+    "duplicate_collection_id_records": 0,
+    "openplc": 70,
+    "paired": 70,
+    "phase_events": 4,
+    "raspi": 70,
+    "unpaired_openplc": 0,
+    "unpaired_raspi": 0
+  },
+  "run_id": "examination-20260728T221411Z-be18d230",
+  "scenario": "PERLAKUAN_1_FDI",
+  "started_at_utc": "2026-07-28T22:14:11.672Z",
+  "timing": {
+    "median_sampling_skew_ms": 7.0,
+    "median_source_age_ms": 4312.5,
+    "phase_record_counts": {
+      "ATTACK": 40,
+      "POST_RECOVERY": 16,
+      "PRE_ATTACK": 6,
+      "RECOVERY": 8
+    }
+  },
+  "validation": {
+    "error_count": 0,
+    "issue_count": 0,
+    "warning_count": 0
+  }
+}

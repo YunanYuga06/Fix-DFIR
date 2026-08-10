@@ -1,0 +1,26 @@
+PRESERVATION NOTES
+
+created_at_utc=2026-07-18T20:19:29.608Z
+operator=Yunan Yuga Pratama
+scenario=PERLAKUAN_1_FDI
+experiment_id=EXP-P1-01
+collector_session_id=collector-20260718T122600Z-53c3e2f1
+session_manifest=metadata/session_manifest.json
+
+Method:
+- Isi raw diverifikasi terhadap hash_manifest.csv dari collector.
+- Master dibuat dari raw dan diverifikasi menggunakan SHA-256.
+- Working copy dibuat dari master dan diverifikasi menggunakan SHA-256.
+- File master dibuat read-only sebagai kontrol tambahan.
+- Examination dan analysis hanya dilakukan pada working copy.
+
+Known conditions and limitations:
+- session_manifest.json memiliki pcap_reference=null/kosong walaupun file PCAP ditemukan di raw.
+- Attack script dan OpenPLC berjalan pada host yang sama.
+- Loopback PCAP tidak membuktikan attacker eksternal melalui jaringan Wi-Fi.
+- Phase RECOVERY tidak persis sama dengan waktu FC06 terakhir dalam PCAP.
+
+Interpretation rule:
+- SHA-256 membuktikan file tidak berubah sejak hashing; hash tidak membuktikan nilai proses benar secara operasional.
+- Raw dan master tidak boleh diedit, dinormalisasi, atau diperbaiki.
+- Hasil parsing, filtering, correlation, dan perhitungan harus disimpan di analysis.

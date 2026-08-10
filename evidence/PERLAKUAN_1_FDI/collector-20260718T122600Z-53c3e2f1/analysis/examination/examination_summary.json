@@ -1,0 +1,64 @@
+{
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1",
+  "collector_session_id": "collector-20260718T122600Z-53c3e2f1",
+  "completed_at_utc": "2026-07-18T20:21:26.879Z",
+  "examination_schema_version": "1.0",
+  "examination_status": "READY_FOR_ANALYSIS",
+  "experiment_id": "EXP-P1-01",
+  "factual_checks": {
+    "cross_layer_match_false": 29,
+    "cross_layer_match_true": 77,
+    "openplc_acquisition_success": 106,
+    "plc_internal_match_false": 0,
+    "plc_internal_match_true": 106,
+    "raspi_acquisition_success": 106,
+    "source_match_false": 0,
+    "source_match_true": 106
+  },
+  "input": {
+    "master_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1\\master",
+    "pcap_files": [
+      "raw/fdi_loopback_adapter.pcapng"
+    ],
+    "working_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1\\working",
+    "working_verified_against_master": true
+  },
+  "method_note": "Output ini merupakan hasil Examination/derived evidence. Kesimpulan insiden dibuat pada tahap Analysis.",
+  "operator": "Yunan Yuga Pratama",
+  "pcap": {
+    "fc06_request_count": 75,
+    "fc06_response_count": 75,
+    "file_count": 1,
+    "modbus_event_count": 549,
+    "packet_count": 1854,
+    "write_event_count": 150
+  },
+  "records": {
+    "candidate_timeline_events": 260,
+    "duplicate_collection_id_records": 0,
+    "openplc": 106,
+    "paired": 106,
+    "phase_events": 4,
+    "raspi": 106,
+    "unpaired_openplc": 0,
+    "unpaired_raspi": 0
+  },
+  "run_id": "examination-20260718T202126Z-a4e5742f",
+  "scenario": "PERLAKUAN_1_FDI",
+  "started_at_utc": "2026-07-18T20:21:26.734Z",
+  "timing": {
+    "median_sampling_skew_ms": 1.0,
+    "median_source_age_ms": 2575.5,
+    "phase_record_counts": {
+      "ATTACK": 33,
+      "POST_RECOVERY": 43,
+      "PRE_ATTACK": 25,
+      "RECOVERY": 5
+    }
+  },
+  "validation": {
+    "error_count": 0,
+    "issue_count": 0,
+    "warning_count": 0
+  }
+}

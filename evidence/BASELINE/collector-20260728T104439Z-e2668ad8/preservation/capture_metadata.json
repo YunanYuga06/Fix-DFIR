@@ -1,0 +1,15 @@
+{
+  "capture_files": [
+    {
+      "relative_path": "baseline.pcapng",
+      "sha256": "9a0a4a5475496232b43cc09ee4c8353c26ef125f820e7714da6e676f092b0682",
+      "size_bytes": 457076
+    }
+  ],
+  "capture_filter": "tcp port 502",
+  "capture_interface": "Wi-Fi",
+  "capture_role": "Baseline Modbus/TCP network evidence",
+  "created_at_utc": "2026-07-28T10:55:58.188Z",
+  "note": "Interface, capture filter, dan role berasal dari parameter operator; script tidak menebaknya dari isi PCAP.",
+  "scenario": "BASELINE"
+}

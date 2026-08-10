@@ -1,0 +1,61 @@
+{
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8",
+  "collector_session_id": "collector-20260728T104439Z-e2668ad8",
+  "completed_at_utc": "2026-07-28T11:18:54.830Z",
+  "examination_schema_version": "1.0",
+  "examination_status": "READY_FOR_ANALYSIS",
+  "experiment_id": "EXP-20260728T104439Z-3e25d72e",
+  "factual_checks": {
+    "cross_layer_match_false": 0,
+    "cross_layer_match_true": 0,
+    "openplc_acquisition_success": 37,
+    "plc_internal_match_false": 0,
+    "plc_internal_match_true": 0,
+    "raspi_acquisition_success": 37,
+    "source_match_false": 0,
+    "source_match_true": 0
+  },
+  "input": {
+    "master_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\master",
+    "pcap_files": [
+      "raw/baseline.pcapng"
+    ],
+    "working_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\working",
+    "working_verified_against_master": true
+  },
+  "method_note": "Output ini merupakan hasil Examination/derived evidence. Kesimpulan insiden dibuat pada tahap Analysis.",
+  "operator": "Mr. Y",
+  "pcap": {
+    "fc06_request_count": 0,
+    "fc06_response_count": 0,
+    "file_count": 1,
+    "modbus_event_count": 204,
+    "packet_count": 2199,
+    "write_event_count": 52
+  },
+  "records": {
+    "candidate_timeline_events": 90,
+    "duplicate_collection_id_records": 0,
+    "openplc": 37,
+    "paired": 37,
+    "phase_events": 1,
+    "raspi": 37,
+    "unpaired_openplc": 0,
+    "unpaired_raspi": 0
+  },
+  "run_id": "examination-20260728T111854Z-f12f3a2a",
+  "scenario": "BASELINE",
+  "started_at_utc": "2026-07-28T11:18:54.720Z",
+  "timing": {
+    "median_sampling_skew_ms": 8.0,
+    "median_source_age_ms": 4632.0,
+    "phase_record_counts": {
+      "BASELINE": 37
+    }
+  },
+  "validation": {
+    "error_count": 0,
+    "issue_count": 0,
+    "warning_count": 0
+  }
+}

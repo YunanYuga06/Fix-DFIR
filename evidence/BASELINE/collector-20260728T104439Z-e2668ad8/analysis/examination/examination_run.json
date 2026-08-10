@@ -1,0 +1,18 @@
+{
+  "arguments": {
+    "allow_no_pcap": false,
+    "append_custody": false,
+    "force": true,
+    "modbus_port": 502,
+    "operator": "Mr. Y"
+  },
+  "completed_at_utc": "2026-07-28T11:18:54.833Z",
+  "host": "Youma-PC",
+  "operator": "Mr. Y",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "run_id": "examination-20260728T111854Z-f12f3a2a",
+  "script_path": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\analysis\\examine_case.py",
+  "script_sha256": "408da484ac2deb49cc106f29f32ed9d9745cd6fbe298f30e738db743e33d79c2",
+  "started_at_utc": "2026-07-28T11:18:54.720Z",
+  "status": "READY_FOR_ANALYSIS"
+}

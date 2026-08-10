@@ -1,0 +1,14 @@
+2026-07-18T20:21:43.486Z ==============================================================================
+2026-07-18T20:21:43.486Z  DFIR CROSS-SCENARIO ANALYSIS + REPORTING
+2026-07-18T20:21:43.486Z ==============================================================================
+2026-07-18T20:21:43.486Z Run ID               : analysis-20260718T202143Z-700e513f
+2026-07-18T20:21:43.486Z Operator             : Yunan Yuga Pratama
+2026-07-18T20:21:43.486Z Baseline Examination : C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260718T122308Z-8dba7023\analysis\examination
+2026-07-18T20:21:43.486Z P1 Examination       : C:\Users\user\Documents\PrivateProject\DFIR\evidence\PERLAKUAN_1_FDI\collector-20260718T122600Z-53c3e2f1\analysis\examination
+2026-07-18T20:21:43.486Z Output               : C:\Users\user\Documents\PrivateProject\DFIR\analysis\results\BASELINE_vs_PERLAKUAN_1_FDI
+2026-07-18T20:21:43.554Z [OK] Kedua output Examination valid dan READY_FOR_ANALYSIS.
+2026-07-18T20:21:43.559Z [OK] Integrity dan availability dihitung per scenario dan fase.
+2026-07-18T20:21:43.563Z [OK] Technical attack window, propagation, persistence, dan recovery dihitung.
+2026-07-18T20:21:43.569Z [OK] Cross-layer correlation, comparison, dan final timeline dibuat.
+2026-07-18T20:21:43.578Z [STATUS] END_TO_END_ADAPTATION_DEMONSTRATED_FOR_CURRENT_TESTBED
+2026-07-18T20:21:43.578Z [OK] Report Markdown dan HTML berhasil dibuat.

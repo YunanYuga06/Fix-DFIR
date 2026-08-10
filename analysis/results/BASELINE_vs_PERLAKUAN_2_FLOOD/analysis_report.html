@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-Layer DFIR Analysis — PAMSIMAS</title>
+<style>
+:root {
+  color-scheme: light;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --line: #d1d5db;
+  --head: #f3f4f6;
+  --accent: #1d4ed8;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1180px;
+  margin: 36px auto;
+  padding: 0 24px 48px;
+  line-height: 1.58;
+  color: var(--text);
+  background: #ffffff;
+}
+h1 {
+  color: #111827;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 12px;
+  margin-bottom: 28px;
+}
+h2 {
+  color: #111827;
+  margin-top: 34px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line);
+}
+h3 { color: #111827; margin-top: 25px; }
+p { margin: 10px 0; }
+ul { margin: 10px 0 18px 22px; padding: 0; }
+li { margin: 6px 0; }
+code {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.94em;
+}
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 14px 0 28px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 720px;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--head);
+  color: #111827;
+  position: sticky;
+  top: 0;
+}
+tbody tr:nth-child(even) { background: #fafafa; }
+strong { color: #111827; }
+@media print {
+  body { max-width: none; margin: 0; padding: 0; }
+  .table-wrap { overflow: visible; }
+  table { min-width: 0; font-size: 9pt; }
+  h2 { break-after: avoid; }
+  tr { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Cross-Layer DFIR Analysis — PAMSIMAS ThingsBoard–Raspberry Pi–OpenPLC</h1>
+<p><strong>Analysis run:</strong> <code>analysis-20260728T224912Z-7cdf4854</code> <strong>Operator:</strong> <code>Mr. Y</code> <strong>Generated:</strong> <code>2026-07-28T22:49:16.313Z</code></p>
+<h2>Scope</h2>
+<p>This report analyses source encoding, Raspberry Pi–OpenPLC cross-layer integrity, OpenPLC control logic, valve impact, and acquisition availability.</p>
+<p>Baseline session: <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260728T104439Z-e2668ad8</code> Treatment session: <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\PERLAKUAN_2_FLOOD\collector-20260728T115112Z-dc91fc98</code></p>
+<h2>Operational definitions</h2>
+<ul>
+<li><strong>Source encoding integrity:</strong> original telemetry equals the encoded value sent by Raspberry Pi.</li>
+<li><strong>Cross-layer integrity:</strong> Raspberry Pi sent value equals OpenPLC received value.</li>
+<li><strong>PLC logic consistency:</strong> OpenPLC output matches the control rule for the value received by OpenPLC.</li>
+<li><strong>Controller impact:</strong> actual valve output differs from the output expected from the legitimate Raspberry Pi source.</li>
+<li><strong>Acquisition availability:</strong> collector read/send/pair success; this is not automatically full physical-process availability.</li>
+</ul>
+<h2>Main metrics</h2>
+<ul>
+<li>Baseline source encoding integrity: <strong>100.000%</strong>.</li>
+<li>Baseline cross-layer ODO integrity: <strong>100.000%</strong>.</li>
+<li>Treatment source encoding integrity: <strong>100.000%</strong>.</li>
+<li>Treatment cross-layer ODO integrity: <strong>86.275%</strong>.</li>
+<li>Observed HR1024 attack-value records (<code>1212</code>): <strong>6</strong>.</li>
+<li>Network write evidence available: <strong>YES</strong>.</li>
+</ul>
+<h2>Integrity by phase</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Scenario</th><th>Phase</th><th>Records</th><th>Source all fields</th><th>Cross ODO</th><th>Cross all fields</th><th>PLC logic</th><th>Impact records</th></tr></thead>
+<tbody>
+<tr><td>BASELINE</td><td>ALL</td><td>37</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>0</td></tr>
+<tr><td>BASELINE</td><td>BASELINE</td><td>37</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>ALL</td><td>69</td><td>100.000%</td><td>86.275%</td><td>86.275%</td><td>94.118%</td><td>6</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>ATTACK</td><td>25</td><td>100.000%</td><td>57.143%</td><td>57.143%</td><td>100.000%</td><td>6</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>POST_RECOVERY</td><td>7</td><td>100.000%</td><td>N/A</td><td>N/A</td><td>N/A</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>PRE_ATTACK</td><td>37</td><td>100.000%</td><td>97.297%</td><td>97.297%</td><td>91.892%</td><td>0</td></tr>
+</tbody></table></div>
+<h2>Availability by phase</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Scenario</th><th>Phase</th><th>Cycles</th><th>Raspi read</th><th>Sender send</th><th>OpenPLC read</th><th>Paired</th><th>Seq gaps</th><th>Seq backwards</th></tr></thead>
+<tbody>
+<tr><td>BASELINE</td><td>ALL</td><td>37</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>0</td><td>0</td></tr>
+<tr><td>BASELINE</td><td>BASELINE</td><td>37</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>0</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>ALL</td><td>69</td><td>100.000%</td><td>76.812%</td><td>73.913%</td><td>100.000%</td><td>0</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>ATTACK</td><td>25</td><td>100.000%</td><td>64.000%</td><td>56.000%</td><td>100.000%</td><td>0</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>POST_RECOVERY</td><td>7</td><td>100.000%</td><td>0.000%</td><td>0.000%</td><td>100.000%</td><td>0</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>PRE_ATTACK</td><td>37</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>100.000%</td><td>0</td><td>0</td></tr>
+</tbody></table></div>
+<h2>Controller logic by phase</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Scenario</th><th>Phase</th><th>Valve open</th><th>Valve closed</th><th>Abnormal</th><th>Unpaid</th><th>PLC logic rate</th><th>Source-expected valve rate</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td>BASELINE</td><td>ALL</td><td>37</td><td>0</td><td>0</td><td>0</td><td>100.000%</td><td>100.000%</td><td>0</td></tr>
+<tr><td>BASELINE</td><td>BASELINE</td><td>37</td><td>0</td><td>0</td><td>0</td><td>100.000%</td><td>100.000%</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>ALL</td><td>45</td><td>6</td><td>6</td><td>0</td><td>94.118%</td><td>88.235%</td><td>6</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>ATTACK</td><td>8</td><td>6</td><td>6</td><td>0</td><td>100.000%</td><td>57.143%</td><td>6</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>POST_RECOVERY</td><td>0</td><td>0</td><td>0</td><td>0</td><td>N/A</td><td>N/A</td><td>0</td></tr>
+<tr><td>PERLAKUAN_2_FLOOD</td><td>PRE_ATTACK</td><td>37</td><td>0</td><td>0</td><td>0</td><td>91.892%</td><td>100.000%</td><td>0</td></tr>
+</tbody></table></div>
+<h2>Baseline vs treatment</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>Baseline</th><th>Treatment</th><th>Delta</th><th>Unit</th></tr></thead>
+<tbody>
+<tr><td>Source encoding integrity - all fields</td><td>100.0</td><td>100.0</td><td>0.0</td><td>%</td></tr>
+<tr><td>Cross-layer ODO integrity</td><td>100.0</td><td>86.275</td><td>-13.725</td><td>%</td></tr>
+<tr><td>Cross-layer all-fields integrity</td><td>100.0</td><td>86.275</td><td>-13.725</td><td>%</td></tr>
+<tr><td>PLC internal ODO consistency</td><td>100.0</td><td>94.118</td><td>-5.882</td><td>%</td></tr>
+<tr><td>PLC controller logic consistency</td><td>100.0</td><td>94.118</td><td>-5.882</td><td>%</td></tr>
+<tr><td>Valve output match against legitimate source</td><td>100.0</td><td>88.235</td><td>-11.765</td><td>%</td></tr>
+<tr><td>Raspberry Pi acquisition availability</td><td>100.0</td><td>100.0</td><td>0.0</td><td>%</td></tr>
+<tr><td>OpenPLC acquisition availability</td><td>100.0</td><td>73.913</td><td>-26.087</td><td>%</td></tr>
+<tr><td>Paired collection rate</td><td>100.0</td><td>100.0</td><td>0.0</td><td>%</td></tr>
+<tr><td>Observed controller impact records</td><td>0</td><td>6</td><td>6.0</td><td>records</td></tr>
+</tbody></table></div>
+<h2>Attack and recovery</h2>
+<p>Configured target: <code>HR1024=1212</code>.</p>
+<p>Network write evidence was found and used for correlation.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Recovery metric</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Attack observations</td><td>6</td></tr>
+<tr><td>First network write</td><td>2026-07-28T11:51:50.924Z</td></tr>
+<tr><td>First attack value observed</td><td>2026-07-28T11:51:52.519Z</td></tr>
+<tr><td>Last attack value observed</td><td>2026-07-28T11:51:57.532Z</td></tr>
+<tr><td>First normal observation</td><td>2026-07-28T11:51:58.523Z</td></tr>
+<tr><td>Stable recovery confirmed</td><td>2026-07-28T11:52:00.541Z</td></tr>
+<tr><td>Last attack observation to stable confirmation</td><td>3.009 s</td></tr>
+</tbody></table></div>
+<h2>Findings</h2>
+<h3>F-BASELINE-01 — Baseline cross-layer integrity</h3>
+<p><strong>Severity:</strong> <code>INFORMATIONAL</code></p>
+<p>Baseline cross-layer ODO integrity rate was 100.000%; all-fields cross-layer rate was 100.000%.</p>
+<p><strong>Evidence:</strong> <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260728T104439Z-e2668ad8\raw\raspi_evidence.csv</code>, <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260728T104439Z-e2668ad8\raw\openplc_evidence.csv</code></p>
+<h3>F-BASELINE-02 — Baseline acquisition availability</h3>
+<p><strong>Severity:</strong> <code>INFORMATIONAL</code></p>
+<p>Raspberry Pi read availability was 100.000% and OpenPLC read availability was 100.000%.</p>
+<p><strong>Evidence:</strong> <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260728T104439Z-e2668ad8\raw\raspi_evidence.csv</code>, <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260728T104439Z-e2668ad8\raw\openplc_evidence.csv</code></p>
+<h3>F-BASELINE-03 — Baseline controller behaviour</h3>
+<p><strong>Severity:</strong> <code>INFORMATIONAL</code></p>
+<p>OpenPLC logic consistency rate was 100.000%; valve output agreement with the legitimate source was 100.000%.</p>
+<p><strong>Evidence:</strong> <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260728T104439Z-e2668ad8\raw\openplc_evidence.csv</code></p>
+<h3>F-P1-01 — ODO Meter cross-layer integrity violation</h3>
+<p><strong>Severity:</strong> <code>HIGH</code></p>
+<p>6 record(s) showed OpenPLC ODO Meter equal to the configured attack value while the Raspberry Pi source sent a different legitimate value. Network write events were available and correlated.</p>
+<p><strong>Evidence:</strong> <code>attack_observations.csv</code>, <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\PERLAKUAN_2_FLOOD\collector-20260728T115112Z-dc91fc98\raw\raspi_evidence.csv</code>, <code>C:\Users\user\Documents\PrivateProject\DFIR\evidence\PERLAKUAN_2_FLOOD\collector-20260728T115112Z-dc91fc98\raw\openplc_evidence.csv</code></p>
+<h3>F-P1-02 — Controller impact on valve output</h3>
+<p><strong>Severity:</strong> <code>MEDIUM</code></p>
+<p>Controller operational impact was observed in 6 record(s). This metric compares the actual valve output with the output expected from the legitimate Raspberry Pi source.</p>
+<p><strong>Evidence:</strong> <code>control_logic_analysis.csv</code>, <code>paired_cross_layer_analysis.csv</code></p>
+<h3>F-P1-03 — OpenPLC controller logic remained internally consistent</h3>
+<p><strong>Severity:</strong> <code>INFORMATIONAL</code></p>
+<p>PLC logic consistency was 94.118%. A high rate means OpenPLC correctly applied its control rules to the value it received, even when that value differed from the legitimate source.</p>
+<p><strong>Evidence:</strong> <code>control_logic_analysis.csv</code></p>
+<h3>F-P1-04 — Acquisition availability during treatment</h3>
+<p><strong>Severity:</strong> <code>INFORMATIONAL</code></p>
+<p>Raspberry Pi read availability was 100.000%; OpenPLC read availability was 73.913%. Availability of acquisition can remain high while process-data integrity is violated.</p>
+<p><strong>Evidence:</strong> <code>availability_analysis.csv</code></p>
+<h3>F-P1-05 — Stable recovery observed</h3>
+<p><strong>Severity:</strong> <code>INFORMATIONAL</code></p>
+<p>Stable recovery was confirmed at 2026-07-28T11:52:00.541Z after 3 consecutive normal records.</p>
+<p><strong>Evidence:</strong> <code>recovery_analysis.csv</code>, <code>final_incident_timeline.csv</code></p>
+<h2>Significant incident timeline</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>UTC</th><th>Scenario</th><th>Layer</th><th>Event</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>2026-07-28T10:44:39.367Z</td><td>BASELINE</td><td>collector</td><td>COLLECTION_STARTED</td><td>First paired evidence record for BASELINE.</td></tr>
+<tr><td>2026-07-28T10:45:15.279Z</td><td>BASELINE</td><td>collector</td><td>COLLECTION_ENDED</td><td>Last paired evidence record for BASELINE.</td></tr>
+<tr><td>2026-07-28T11:51:12.628Z</td><td>PERLAKUAN_2_FLOOD</td><td>collector</td><td>COLLECTION_STARTED</td><td>First paired evidence record for PERLAKUAN_2_FLOOD.</td></tr>
+<tr><td>2026-07-28T11:51:12.628Z</td><td>PERLAKUAN_2_FLOOD</td><td>collector</td><td>PHASE_PRE_ATTACK</td><td>First paired record classified as phase PRE_ATTACK.</td></tr>
+<tr><td>2026-07-28T11:51:49.554Z</td><td>PERLAKUAN_2_FLOOD</td><td>collector</td><td>PHASE_ATTACK</td><td>First paired record classified as phase ATTACK.</td></tr>
+<tr><td>2026-07-28T11:51:50.924Z</td><td>PERLAKUAN_2_FLOOD</td><td>network</td><td>FIRST_CONFIGURED_MODBUS_WRITE</td><td>Modbus write to HR1024=1212.</td></tr>
+<tr><td>2026-07-28T11:51:51.354Z</td><td>PERLAKUAN_2_FLOOD</td><td>network</td><td>LAST_CONFIGURED_MODBUS_WRITE</td><td>Modbus write to HR1024=1212.</td></tr>
+<tr><td>2026-07-28T11:51:52.519Z</td><td>PERLAKUAN_2_FLOOD</td><td>openplc</td><td>FIRST_ATTACK_VALUE_OBSERVED</td><td>First cross-layer ODO mismatch with configured attack value; controller entered abnormal-usage path.</td></tr>
+<tr><td>2026-07-28T11:51:57.532Z</td><td>PERLAKUAN_2_FLOOD</td><td>openplc</td><td>LAST_ATTACK_VALUE_OBSERVED</td><td>Last observed configured attack value at OpenPLC.</td></tr>
+<tr><td>2026-07-28T11:51:58.523Z</td><td>PERLAKUAN_2_FLOOD</td><td>cross_layer</td><td>FIRST_NORMAL_OBSERVATION</td><td>First normal cross-layer ODO and valve observation after attack.</td></tr>
+<tr><td>2026-07-28T11:52:00.541Z</td><td>PERLAKUAN_2_FLOOD</td><td>cross_layer</td><td>STABLE_RECOVERY_CONFIRMED</td><td>Configured number of consecutive normal records reached.</td></tr>
+<tr><td>2026-07-28T11:52:38.235Z</td><td>PERLAKUAN_2_FLOOD</td><td>collector</td><td>PHASE_POST_RECOVERY</td><td>First paired record classified as phase POST_RECOVERY.</td></tr>
+<tr><td>2026-07-28T11:52:56.542Z</td><td>PERLAKUAN_2_FLOOD</td><td>collector</td><td>COLLECTION_ENDED</td><td>Last paired evidence record for PERLAKUAN_2_FLOOD.</td></tr>
+</tbody></table></div>
+<h2>Limitations</h2>
+<ul>
+<li>The current source is ThingsBoard-shaped hardcoded/mock telemetry until the STM32 and live ThingsBoard integration are completed.</li>
+<li>The Valve field from ThingsBoard is treated as observed field feedback; ValveCommand is the OpenPLC controller output.</li>
+<li>Collector polling may be faster than sender publication, so duplicate source_sequence observations are expected and are not automatically classified as replay.</li>
+<li>Acquisition availability does not by itself prove physical water-service availability.</li>
+</ul>
+<h2>Claim boundary</h2>
+<p>The conclusions apply to the evaluated laboratory testbed, input files, register mapping, controller logic, and experiment windows. They do not constitute universal validation for every PAMSIMAS or OT deployment.</p>
+</main>
+</body>
+</html>

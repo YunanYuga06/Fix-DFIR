@@ -1,0 +1,15 @@
+{
+  "capture_files": [
+    {
+      "relative_path": "perlakuan2.pcapng",
+      "sha256": "5bec77fee144a8ecc176750a02688bd4cb55c075930fbec06ca8bee01ac40d7f",
+      "size_bytes": 1122296
+    }
+  ],
+  "capture_filter": "tcp port 502",
+  "capture_interface": "INTERFACE_YANG_DIGUNAKAN",
+  "capture_role": "Modbus TCP Flooding and availbillity disruption",
+  "created_at_utc": "2026-07-28T22:12:34.582Z",
+  "note": "Interface, capture filter, dan role berasal dari parameter operator; script tidak menebaknya dari isi PCAP.",
+  "scenario": "PERLAKUAN_2_FLOOD"
+}

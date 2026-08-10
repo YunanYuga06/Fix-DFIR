@@ -1,0 +1,80 @@
+[
+  {
+    "evidence": [
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-BASELINE-01",
+    "severity": "INFORMATIONAL",
+    "statement": "Baseline cross-layer ODO integrity rate was 100.000%; all-fields cross-layer rate was 100.000%.",
+    "title": "Baseline cross-layer integrity"
+  },
+  {
+    "evidence": [
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-BASELINE-02",
+    "severity": "INFORMATIONAL",
+    "statement": "Raspberry Pi read availability was 100.000% and OpenPLC read availability was 100.000%.",
+    "title": "Baseline acquisition availability"
+  },
+  {
+    "evidence": [
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-BASELINE-03",
+    "severity": "INFORMATIONAL",
+    "statement": "OpenPLC logic consistency rate was 100.000%; valve output agreement with the legitimate source was 100.000%.",
+    "title": "Baseline controller behaviour"
+  },
+  {
+    "evidence": [
+      "attack_observations.csv",
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260728T114259Z-42bbddba\\raw\\raspi_evidence.csv",
+      "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260728T114259Z-42bbddba\\raw\\openplc_evidence.csv"
+    ],
+    "finding_id": "F-P1-01",
+    "severity": "HIGH",
+    "statement": "31 record(s) showed OpenPLC ODO Meter equal to the configured attack value while the Raspberry Pi source sent a different legitimate value. Network write events were available and correlated.",
+    "title": "ODO Meter cross-layer integrity violation"
+  },
+  {
+    "evidence": [
+      "control_logic_analysis.csv",
+      "paired_cross_layer_analysis.csv"
+    ],
+    "finding_id": "F-P1-02",
+    "severity": "MEDIUM",
+    "statement": "Controller operational impact was observed in 31 record(s). This metric compares the actual valve output with the output expected from the legitimate Raspberry Pi source.",
+    "title": "Controller impact on valve output"
+  },
+  {
+    "evidence": [
+      "control_logic_analysis.csv"
+    ],
+    "finding_id": "F-P1-03",
+    "severity": "INFORMATIONAL",
+    "statement": "PLC logic consistency was 100.000%. A high rate means OpenPLC correctly applied its control rules to the value it received, even when that value differed from the legitimate source.",
+    "title": "OpenPLC controller logic remained internally consistent"
+  },
+  {
+    "evidence": [
+      "availability_analysis.csv"
+    ],
+    "finding_id": "F-P1-04",
+    "severity": "INFORMATIONAL",
+    "statement": "Raspberry Pi read availability was 100.000%; OpenPLC read availability was 100.000%. Availability of acquisition can remain high while process-data integrity is violated.",
+    "title": "Acquisition availability during treatment"
+  },
+  {
+    "evidence": [
+      "recovery_analysis.csv",
+      "final_incident_timeline.csv"
+    ],
+    "finding_id": "F-P1-05",
+    "severity": "INFORMATIONAL",
+    "statement": "Stable recovery was confirmed at 2026-07-28T11:43:41.730Z after 3 consecutive normal records.",
+    "title": "Stable recovery observed"
+  }
+]

@@ -1,0 +1,29 @@
+TIME SYNCHRONIZATION SNAPSHOT
+captured_at_utc=2026-07-28T13:07:14.198Z
+collector_host=Youma-PC
+platform=Windows-11-10.0.26200-SP0
+ntp_reference=Collector Laptop Local NTP Server
+
+$ w32tm /query /status /verbose
+return_code=0
+Leap Indicator: 0(no warning)
+Stratum: 5 (secondary reference - syncd by (S)NTP)
+Precision: -23 (119.209ns per tick)
+Root Delay: 0.0237228s
+Root Dispersion: 8.5159104s
+ReferenceId: 0x349472BC (source IP:  52.148.114.188)
+Last Successful Sync Time: 28/07/2026 18:51:23
+Source: time.windows.com,0x9 
+Poll Interval: 10 (1024s)
+
+Phase Offset: -0.2733048s
+ClockRate: 0.0156250s
+State Machine: 1 (Hold)
+Time Source Flags: 0 (None)
+Server Role: 0 (None)
+Last Sync Error: 2 (The computer did not resync because only stale time data was available.)
+Time since Last Good Sync Time: 4551.2261353s
+
+$ w32tm /query /source
+return_code=2147942405
+The following error occurred: Access is denied. (0x80070005)

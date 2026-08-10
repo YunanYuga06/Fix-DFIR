@@ -1,0 +1,61 @@
+{
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260718T122308Z-8dba7023",
+  "collector_session_id": "collector-20260718T122308Z-8dba7023",
+  "completed_at_utc": "2026-07-18T18:44:54.890Z",
+  "examination_schema_version": "1.0",
+  "examination_status": "READY_FOR_ANALYSIS",
+  "experiment_id": "EXP-20260718T122308Z-5caf4c9b",
+  "factual_checks": {
+    "cross_layer_match_false": 0,
+    "cross_layer_match_true": 69,
+    "openplc_acquisition_success": 69,
+    "plc_internal_match_false": 0,
+    "plc_internal_match_true": 69,
+    "raspi_acquisition_success": 69,
+    "source_match_false": 0,
+    "source_match_true": 69
+  },
+  "input": {
+    "master_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260718T122308Z-8dba7023\\master",
+    "pcap_files": [
+      "raw/baseline_wifi_adapter.pcapng"
+    ],
+    "working_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260718T122308Z-8dba7023\\working",
+    "working_verified_against_master": true
+  },
+  "method_note": "Output ini merupakan hasil Examination/derived evidence. Kesimpulan insiden dibuat pada tahap Analysis.",
+  "operator": "Yunan Yuga Pratama",
+  "pcap": {
+    "fc06_request_count": 20,
+    "fc06_response_count": 20,
+    "file_count": 1,
+    "modbus_event_count": 406,
+    "packet_count": 1543,
+    "write_event_count": 40
+  },
+  "records": {
+    "candidate_timeline_events": 110,
+    "duplicate_collection_id_records": 0,
+    "openplc": 69,
+    "paired": 69,
+    "phase_events": 1,
+    "raspi": 69,
+    "unpaired_openplc": 0,
+    "unpaired_raspi": 0
+  },
+  "run_id": "examination-20260718T184454Z-344bb3fc",
+  "scenario": "BASELINE",
+  "started_at_utc": "2026-07-18T18:44:54.649Z",
+  "timing": {
+    "median_sampling_skew_ms": 1.0,
+    "median_source_age_ms": 2129.0,
+    "phase_record_counts": {
+      "BASELINE": 69
+    }
+  },
+  "validation": {
+    "error_count": 0,
+    "issue_count": 0,
+    "warning_count": 0
+  }
+}

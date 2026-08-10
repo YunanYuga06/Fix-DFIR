@@ -1,0 +1,9 @@
+timestamp_utc,scenario,event_type,layer,description
+2026-07-28T10:44:39.367Z,BASELINE,COLLECTION_STARTED,collector,First paired evidence record for BASELINE.
+2026-07-28T10:45:15.279Z,BASELINE,COLLECTION_ENDED,collector,Last paired evidence record for BASELINE.
+2026-07-28T13:07:14.592Z,PERLAKUAN_3_KOMBINASI,COLLECTION_STARTED,collector,First paired evidence record for PERLAKUAN_3_KOMBINASI.
+2026-07-28T13:07:14.592Z,PERLAKUAN_3_KOMBINASI,PHASE_PRE_ATTACK,collector,First paired record classified as phase PRE_ATTACK.
+2026-07-28T13:07:26.433Z,PERLAKUAN_3_KOMBINASI,PHASE_ATTACK,collector,First paired record classified as phase ATTACK.
+2026-07-28T13:08:50.917Z,PERLAKUAN_3_KOMBINASI,PHASE_RECOVERY,collector,First paired record classified as phase RECOVERY.
+2026-07-28T13:09:03.238Z,PERLAKUAN_3_KOMBINASI,PHASE_POST_RECOVERY,collector,First paired record classified as phase POST_RECOVERY.
+2026-07-28T13:09:33.819Z,PERLAKUAN_3_KOMBINASI,COLLECTION_ENDED,collector,Last paired evidence record for PERLAKUAN_3_KOMBINASI.

@@ -1,0 +1,23 @@
+PRESERVATION NOTES
+
+created_at_utc=2026-07-28T10:55:58.191Z
+operator=Mr. Y
+scenario=BASELINE
+experiment_id=EXP-20260728T104439Z-3e25d72e
+collector_session_id=collector-20260728T104439Z-e2668ad8
+session_manifest=metadata/session_manifest.json
+
+Method:
+- Isi raw diverifikasi terhadap hash_manifest.csv dari collector.
+- Master dibuat dari raw dan diverifikasi menggunakan SHA-256.
+- Working copy dibuat dari master dan diverifikasi menggunakan SHA-256.
+- File master dibuat read-only sebagai kontrol tambahan.
+- Examination dan analysis hanya dilakukan pada working copy.
+
+Known conditions and limitations:
+- session_manifest.json memiliki pcap_reference=null/kosong walaupun file PCAP ditemukan di raw.
+
+Interpretation rule:
+- SHA-256 membuktikan file tidak berubah sejak hashing; hash tidak membuktikan nilai proses benar secara operasional.
+- Raw dan master tidak boleh diedit, dinormalisasi, atau diperbaiki.
+- Hasil parsing, filtering, correlation, dan perhitungan harus disimpan di analysis.

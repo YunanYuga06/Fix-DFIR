@@ -1,0 +1,64 @@
+{
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_3_KOMBINASI\\collector-20260728T130713Z-41eacbc5",
+  "collector_session_id": "collector-20260728T130713Z-41eacbc5",
+  "completed_at_utc": "2026-07-28T22:16:02.520Z",
+  "examination_schema_version": "1.0",
+  "examination_status": "READY_FOR_ANALYSIS",
+  "experiment_id": "EXP-P2-01",
+  "factual_checks": {
+    "cross_layer_match_false": 0,
+    "cross_layer_match_true": 0,
+    "openplc_acquisition_success": 61,
+    "plc_internal_match_false": 0,
+    "plc_internal_match_true": 0,
+    "raspi_acquisition_success": 96,
+    "source_match_false": 0,
+    "source_match_true": 0
+  },
+  "input": {
+    "master_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_3_KOMBINASI\\collector-20260728T130713Z-41eacbc5\\master",
+    "pcap_files": [
+      "raw/perlakuan3.pcapng"
+    ],
+    "working_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_3_KOMBINASI\\collector-20260728T130713Z-41eacbc5\\working",
+    "working_verified_against_master": true
+  },
+  "method_note": "Output ini merupakan hasil Examination/derived evidence. Kesimpulan insiden dibuat pada tahap Analysis.",
+  "operator": "Mr. Y",
+  "pcap": {
+    "fc06_request_count": 0,
+    "fc06_response_count": 0,
+    "file_count": 1,
+    "modbus_event_count": 28884,
+    "packet_count": 12016,
+    "write_event_count": 28639
+  },
+  "records": {
+    "candidate_timeline_events": 28753,
+    "duplicate_collection_id_records": 0,
+    "openplc": 110,
+    "paired": 110,
+    "phase_events": 4,
+    "raspi": 110,
+    "unpaired_openplc": 0,
+    "unpaired_raspi": 0
+  },
+  "run_id": "examination-20260728T221554Z-9af85900",
+  "scenario": "PERLAKUAN_3_KOMBINASI",
+  "started_at_utc": "2026-07-28T22:15:54.133Z",
+  "timing": {
+    "median_sampling_skew_ms": 20.5,
+    "median_source_age_ms": 4185.5,
+    "phase_record_counts": {
+      "ATTACK": 81,
+      "POST_RECOVERY": 11,
+      "PRE_ATTACK": 12,
+      "RECOVERY": 6
+    }
+  },
+  "validation": {
+    "error_count": 0,
+    "issue_count": 0,
+    "warning_count": 0
+  }
+}

@@ -1,0 +1,8 @@
+scenario,phase,collection_cycle_count,raspi_read_success_count,raspi_read_availability_rate_pct,sender_send_success_count,sender_send_availability_rate_pct,openplc_read_success_count,openplc_read_availability_rate_pct,register_read_success_count,register_read_availability_rate_pct,coil_read_success_count,coil_read_availability_rate_pct,complete_pair_count,paired_collection_rate_pct,mean_source_age_ms,max_source_age_ms,mean_sampling_skew_ms,max_sampling_skew_ms,source_sequence_observation_count,source_sequence_duplicate_observation_count,source_sequence_backward_count,source_sequence_gap_event_count,source_sequence_missing_value_count,source_sequence_unique_count
+BASELINE,ALL,37,37,100.0,37,100.0,37,100.0,37,100.0,37,100.0,37,100.0,4592.054,7676.0,10.135,59.0,37,31,0,0,0,6
+BASELINE,BASELINE,37,37,100.0,37,100.0,37,100.0,37,100.0,37,100.0,37,100.0,4592.054,7676.0,10.135,59.0,37,31,0,0,0,6
+PERLAKUAN_1_FDI,ALL,70,70,100.0,70,100.0,70,100.0,70,100.0,70,100.0,70,100.0,4307.886,7357.0,27.129,378.0,70,59,0,0,0,11
+PERLAKUAN_1_FDI,ATTACK,40,40,100.0,40,100.0,40,100.0,40,100.0,40,100.0,40,100.0,4320.425,7351.0,32.975,378.0,40,34,0,0,0,6
+PERLAKUAN_1_FDI,POST_RECOVERY,16,16,100.0,16,100.0,16,100.0,16,100.0,16,100.0,16,100.0,3958.188,7280.0,8.562,15.0,16,13,0,0,0,3
+PERLAKUAN_1_FDI,PRE_ATTACK,6,6,100.0,6,100.0,6,100.0,6,100.0,6,100.0,6,100.0,4687.5,7357.0,64.0,226.0,6,4,0,0,0,2
+PERLAKUAN_1_FDI,RECOVERY,8,8,100.0,8,100.0,8,100.0,8,100.0,8,100.0,8,100.0,4659.875,7308.0,7.375,9.0,8,6,0,0,0,2

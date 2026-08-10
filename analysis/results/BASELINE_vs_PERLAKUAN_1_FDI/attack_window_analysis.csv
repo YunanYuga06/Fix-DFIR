@@ -1,0 +1,2 @@
+﻿scenario,target_register,attack_value,request_count,response_count,first_request_timestamp_utc,last_request_timestamp_utc,technical_attack_duration_seconds,mean_request_interval_seconds,median_request_interval_seconds,min_request_interval_seconds,max_request_interval_seconds,definition
+PERLAKUAN_1_FDI,1024,1000,75,75,2026-07-18T12:26:26.316880Z,2026-07-18T12:26:55.947926Z,29.631046,0.4004195405405405,0.400434,0.40001,0.401121,Technical attack window uses first and last matching FC06 request in PCAP.

@@ -1,0 +1,14 @@
+2026-07-28T22:15:54.135Z ============================================================================
+2026-07-28T22:15:54.135Z  DFIR EXAMINATION
+2026-07-28T22:15:54.135Z ============================================================================
+2026-07-28T22:15:54.135Z Case root : C:\Users\user\Documents\PrivateProject\DFIR\evidence\PERLAKUAN_3_KOMBINASI\collector-20260728T130713Z-41eacbc5
+2026-07-28T22:15:54.136Z Run ID    : examination-20260728T221554Z-9af85900
+2026-07-28T22:15:54.136Z Operator  : Mr. Y
+2026-07-28T22:15:54.225Z [OK] Working copy identik dengan master.
+2026-07-28T22:15:54.250Z [OK] Schema wajib tersedia.
+2026-07-28T22:15:54.361Z [OK] Normalisasi selesai: raspi=110, openplc=110.
+2026-07-28T22:15:54.382Z [OK] Pairing selesai: paired=110, unpaired_raspi=0, unpaired_openplc=0.
+2026-07-28T22:15:54.386Z [OK] Phase event diekstrak: 4.
+2026-07-28T22:16:00.476Z [OK] PCAP diekstrak: files=1, modbus_events=28884, write_events=28639.
+2026-07-28T22:16:02.457Z [OK] Candidate timeline dibuat: 28753 event.
+2026-07-28T22:16:02.565Z [STATUS] READY_FOR_ANALYSIS

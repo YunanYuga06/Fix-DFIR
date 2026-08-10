@@ -1,0 +1,14 @@
+2026-07-18T18:44:54.649Z ============================================================================
+2026-07-18T18:44:54.649Z  DFIR EXAMINATION
+2026-07-18T18:44:54.650Z ============================================================================
+2026-07-18T18:44:54.650Z Case root : C:\Users\user\Documents\PrivateProject\DFIR\evidence\BASELINE\collector-20260718T122308Z-8dba7023
+2026-07-18T18:44:54.650Z Run ID    : examination-20260718T184454Z-344bb3fc
+2026-07-18T18:44:54.650Z Operator  : Yunan Yuga Pratama
+2026-07-18T18:44:54.802Z [OK] Working copy identik dengan master.
+2026-07-18T18:44:54.808Z [OK] Schema wajib tersedia.
+2026-07-18T18:44:54.826Z [OK] Normalisasi selesai: raspi=69, openplc=69.
+2026-07-18T18:44:54.834Z [OK] Pairing selesai: paired=69, unpaired_raspi=0, unpaired_openplc=0.
+2026-07-18T18:44:54.835Z [OK] Phase event diekstrak: 1.
+2026-07-18T18:44:54.883Z [OK] PCAP diekstrak: files=1, modbus_events=406, write_events=40.
+2026-07-18T18:44:54.887Z [OK] Candidate timeline dibuat: 110 event.
+2026-07-18T18:44:54.894Z [STATUS] READY_FOR_ANALYSIS

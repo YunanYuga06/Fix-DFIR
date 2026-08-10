@@ -1,0 +1,5 @@
+event_timestamp,experiment_id,collector_session_id,event_type,experiment_phase,source,note
+2026-07-28T13:07:14.401Z,EXP-P2-01,collector-20260728T130713Z-41eacbc5,EXPERIMENT_PHASE_CHANGED,PRE_ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,P3 pre-attack observation
+2026-07-28T13:07:26.351Z,EXP-P2-01,collector-20260728T130713Z-41eacbc5,EXPERIMENT_PHASE_CHANGED,ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,REPLAY ATTACK AND FLOODING
+2026-07-28T13:08:49.866Z,EXP-P2-01,collector-20260728T130713Z-41eacbc5,EXPERIMENT_PHASE_CHANGED,RECOVERY,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,P3 legitimate Raspberry Pi data restored
+2026-07-28T13:09:00.223Z,EXP-P2-01,collector-20260728T130713Z-41eacbc5,EXPERIMENT_PHASE_CHANGED,POST_RECOVERY,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,P3 stable post-recovery observation

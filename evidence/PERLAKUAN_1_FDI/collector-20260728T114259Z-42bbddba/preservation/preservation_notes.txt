@@ -1,0 +1,24 @@
+PRESERVATION NOTES
+
+created_at_utc=2026-07-28T22:07:07.386Z
+operator=Mr. Y
+scenario=PERLAKUAN_1_FDI
+experiment_id=EXP-P1-01
+collector_session_id=collector-20260728T114259Z-42bbddba
+session_manifest=metadata/session_manifest.json
+
+Method:
+- Isi raw diverifikasi terhadap hash_manifest.csv dari collector.
+- Master dibuat dari raw dan diverifikasi menggunakan SHA-256.
+- Working copy dibuat dari master dan diverifikasi menggunakan SHA-256.
+- File master dibuat read-only sebagai kontrol tambahan.
+- Examination dan analysis hanya dilakukan pada working copy.
+
+Known conditions and limitations:
+- session_manifest.json memiliki pcap_reference=null/kosong walaupun file PCAP ditemukan di raw.
+- Perlakuan 1 berupa False Data Injection nilai 1000 pada HR1024
+
+Interpretation rule:
+- SHA-256 membuktikan file tidak berubah sejak hashing; hash tidak membuktikan nilai proses benar secara operasional.
+- Raw dan master tidak boleh diedit, dinormalisasi, atau diperbaiki.
+- Hasil parsing, filtering, correlation, dan perhitungan harus disimpan di analysis.

@@ -1,0 +1,8 @@
+scenario,phase,record_count,valve_open_count,valve_closed_count,abnormal_usage_true_count,payment_blocked_true_count,process_state_1_normal_count,process_state_2_unpaid_count,process_state_3_abnormal_count,valve_reason_0_none_count,valve_reason_1_unpaid_count,valve_reason_2_abnormal_count,plc_logic_consistency_passed,plc_logic_consistency_evaluated,plc_logic_consistency_rate_pct,source_expected_valve_passed,source_expected_valve_evaluated,source_expected_valve_rate_pct,controller_operational_impact_count,controller_operational_impact_rate_pct
+BASELINE,ALL,37,37,0,0,0,37,0,0,37,0,0,37,37,100.0,37,37,100.0,0,0.0
+BASELINE,BASELINE,37,37,0,0,0,37,0,0,37,0,0,37,37,100.0,37,37,100.0,0,0.0
+PERLAKUAN_3_KOMBINASI,ALL,110,61,0,0,0,61,0,0,61,0,0,61,61,100.0,61,61,100.0,0,0.0
+PERLAKUAN_3_KOMBINASI,ATTACK,81,49,0,0,0,49,0,0,49,0,0,49,49,100.0,49,49,100.0,0,0.0
+PERLAKUAN_3_KOMBINASI,POST_RECOVERY,11,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,,0,0.0
+PERLAKUAN_3_KOMBINASI,PRE_ATTACK,12,12,0,0,0,12,0,0,12,0,0,12,12,100.0,12,12,100.0,0,0.0
+PERLAKUAN_3_KOMBINASI,RECOVERY,6,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,,0,0.0

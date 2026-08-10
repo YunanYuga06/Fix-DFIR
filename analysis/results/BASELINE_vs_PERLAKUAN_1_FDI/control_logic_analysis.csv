@@ -1,0 +1,8 @@
+scenario,phase,record_count,valve_open_count,valve_closed_count,abnormal_usage_true_count,payment_blocked_true_count,process_state_1_normal_count,process_state_2_unpaid_count,process_state_3_abnormal_count,valve_reason_0_none_count,valve_reason_1_unpaid_count,valve_reason_2_abnormal_count,plc_logic_consistency_passed,plc_logic_consistency_evaluated,plc_logic_consistency_rate_pct,source_expected_valve_passed,source_expected_valve_evaluated,source_expected_valve_rate_pct,controller_operational_impact_count,controller_operational_impact_rate_pct
+BASELINE,ALL,37,37,0,0,0,37,0,0,37,0,0,37,37,100.0,37,37,100.0,0,0.0
+BASELINE,BASELINE,37,37,0,0,0,37,0,0,37,0,0,37,37,100.0,37,37,100.0,0,0.0
+PERLAKUAN_1_FDI,ALL,70,39,31,31,0,39,0,31,39,0,31,70,70,100.0,39,70,55.714,31,44.286
+PERLAKUAN_1_FDI,ATTACK,40,9,31,31,0,9,0,31,9,0,31,40,40,100.0,9,40,22.5,31,77.5
+PERLAKUAN_1_FDI,POST_RECOVERY,16,16,0,0,0,16,0,0,16,0,0,16,16,100.0,16,16,100.0,0,0.0
+PERLAKUAN_1_FDI,PRE_ATTACK,6,6,0,0,0,6,0,0,6,0,0,6,6,100.0,6,6,100.0,0,0.0
+PERLAKUAN_1_FDI,RECOVERY,8,8,0,0,0,8,0,0,8,0,0,8,8,100.0,8,8,100.0,0,0.0

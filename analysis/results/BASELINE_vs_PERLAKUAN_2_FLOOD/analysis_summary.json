@@ -1,0 +1,156 @@
+{
+  "analysis_run_id": "analysis-20260728T224912Z-7cdf4854",
+  "analysis_schema_version": "1.0-pamsimas-thingsboard-analysis",
+  "architecture": "ThingsBoard-shaped telemetry -> Raspberry Pi -> Modbus/TCP -> OpenPLC -> ValveCommand",
+  "claim_boundary": "Conclusions apply to this laboratory testbed and evaluated files; not universal validation for all PAMSIMAS/OT environments.",
+  "coil_mapping": {
+    "Coil0": "ValveCommand",
+    "Coil1": "AbnormalUsage",
+    "Coil2": "PaymentBlocked"
+  },
+  "collector_host": "Youma-PC",
+  "completed_at_utc": "2026-07-28T22:49:16.326Z",
+  "configured_treatment": {
+    "abnormal_threshold": 100,
+    "attack_value": 1212,
+    "correlation_window_seconds": 2.5,
+    "stable_records": 3,
+    "target_register": 1024
+  },
+  "findings": [
+    {
+      "evidence": [
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-BASELINE-01",
+      "severity": "INFORMATIONAL",
+      "statement": "Baseline cross-layer ODO integrity rate was 100.000%; all-fields cross-layer rate was 100.000%.",
+      "title": "Baseline cross-layer integrity"
+    },
+    {
+      "evidence": [
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-BASELINE-02",
+      "severity": "INFORMATIONAL",
+      "statement": "Raspberry Pi read availability was 100.000% and OpenPLC read availability was 100.000%.",
+      "title": "Baseline acquisition availability"
+    },
+    {
+      "evidence": [
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-BASELINE-03",
+      "severity": "INFORMATIONAL",
+      "statement": "OpenPLC logic consistency rate was 100.000%; valve output agreement with the legitimate source was 100.000%.",
+      "title": "Baseline controller behaviour"
+    },
+    {
+      "evidence": [
+        "attack_observations.csv",
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_2_FLOOD\\collector-20260728T115112Z-dc91fc98\\raw\\raspi_evidence.csv",
+        "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_2_FLOOD\\collector-20260728T115112Z-dc91fc98\\raw\\openplc_evidence.csv"
+      ],
+      "finding_id": "F-P1-01",
+      "severity": "HIGH",
+      "statement": "6 record(s) showed OpenPLC ODO Meter equal to the configured attack value while the Raspberry Pi source sent a different legitimate value. Network write events were available and correlated.",
+      "title": "ODO Meter cross-layer integrity violation"
+    },
+    {
+      "evidence": [
+        "control_logic_analysis.csv",
+        "paired_cross_layer_analysis.csv"
+      ],
+      "finding_id": "F-P1-02",
+      "severity": "MEDIUM",
+      "statement": "Controller operational impact was observed in 6 record(s). This metric compares the actual valve output with the output expected from the legitimate Raspberry Pi source.",
+      "title": "Controller impact on valve output"
+    },
+    {
+      "evidence": [
+        "control_logic_analysis.csv"
+      ],
+      "finding_id": "F-P1-03",
+      "severity": "INFORMATIONAL",
+      "statement": "PLC logic consistency was 94.118%. A high rate means OpenPLC correctly applied its control rules to the value it received, even when that value differed from the legitimate source.",
+      "title": "OpenPLC controller logic remained internally consistent"
+    },
+    {
+      "evidence": [
+        "availability_analysis.csv"
+      ],
+      "finding_id": "F-P1-04",
+      "severity": "INFORMATIONAL",
+      "statement": "Raspberry Pi read availability was 100.000%; OpenPLC read availability was 73.913%. Availability of acquisition can remain high while process-data integrity is violated.",
+      "title": "Acquisition availability during treatment"
+    },
+    {
+      "evidence": [
+        "recovery_analysis.csv",
+        "final_incident_timeline.csv"
+      ],
+      "finding_id": "F-P1-05",
+      "severity": "INFORMATIONAL",
+      "statement": "Stable recovery was confirmed at 2026-07-28T11:52:00.541Z after 3 consecutive normal records.",
+      "title": "Stable recovery observed"
+    }
+  ],
+  "inputs": {
+    "baseline_openplc_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\openplc_evidence.csv",
+    "baseline_raspi_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8\\raw\\raspi_evidence.csv",
+    "baseline_session": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\BASELINE\\collector-20260728T104439Z-e2668ad8",
+    "network_write_event_count": 39016,
+    "treatment_openplc_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_2_FLOOD\\collector-20260728T115112Z-dc91fc98\\raw\\openplc_evidence.csv",
+    "treatment_raspi_csv": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_2_FLOOD\\collector-20260728T115112Z-dc91fc98\\raw\\raspi_evidence.csv",
+    "treatment_session": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_2_FLOOD\\collector-20260728T115112Z-dc91fc98"
+  },
+  "limitations": [
+    "The current source is ThingsBoard-shaped hardcoded/mock telemetry until the STM32 and live ThingsBoard integration are completed.",
+    "The Valve field from ThingsBoard is treated as observed field feedback; ValveCommand is the OpenPLC controller output.",
+    "Collector polling may be faster than sender publication, so duplicate source_sequence observations are expected and are not automatically classified as replay.",
+    "Acquisition availability does not by itself prove physical water-service availability."
+  ],
+  "operator": "Mr. Y",
+  "record_counts": {
+    "attack_observation_count": 6,
+    "baseline_paired_records": 37,
+    "treatment_paired_records": 69
+  },
+  "recovery": {
+    "attack_observation_count": 6,
+    "configured_attack_value": 1212,
+    "first_attack_value_observed_utc": "2026-07-28T11:51:52.519Z",
+    "first_network_write_utc": "2026-07-28T11:51:50.924Z",
+    "first_normal_observation_utc": "2026-07-28T11:51:58.523Z",
+    "last_attack_observation_to_first_normal_seconds": 0.991,
+    "last_attack_observation_to_stable_confirmation_seconds": 3.009,
+    "last_attack_value_observed_utc": "2026-07-28T11:51:57.532Z",
+    "last_network_write_to_first_normal_seconds": 7.168,
+    "last_network_write_to_stable_confirmation_seconds": 9.186,
+    "last_network_write_utc": "2026-07-28T11:51:51.354Z",
+    "network_evidence_available": true,
+    "network_to_first_attack_observation_seconds": 1.595,
+    "scenario": "PERLAKUAN_2_FLOOD",
+    "stable_record_requirement": 3,
+    "stable_recovery_confirmed_utc": "2026-07-28T11:52:00.541Z",
+    "stable_recovery_start_utc": "2026-07-28T11:51:58.523Z"
+  },
+  "register_mapping": {
+    "HR1024": "ODO Meter",
+    "HR1025": "Flow Rate x1000",
+    "HR1026": "Volume x10000",
+    "HR1027": "Payment Status",
+    "HR1028": "Source Sequence",
+    "HR1029": "Observed Valve Raw",
+    "HR1030": "Node ID",
+    "HR1031": "ODO Meter Processed",
+    "HR1032": "Process State",
+    "HR1033": "Valve Reason"
+  },
+  "scope": "BASELINE vs PERLAKUAN_2_FLOOD",
+  "script_path": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\analysis\\analyze_testbed.py",
+  "script_sha256": "44473a3b7c05fb15674e745a6de52d7b3d28a3b76f5860585a23356c5f544a8c",
+  "started_at_utc": "2026-07-28T22:49:12.996Z"
+}

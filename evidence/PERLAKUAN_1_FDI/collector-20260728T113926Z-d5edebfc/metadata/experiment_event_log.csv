@@ -1,0 +1,2 @@
+event_timestamp,experiment_id,collector_session_id,event_type,experiment_phase,source,note
+2026-07-28T11:39:27.043Z,EXP-P1-01,collector-20260728T113926Z-d5edebfc,EXPERIMENT_PHASE_CHANGED,PRE_ATTACK,C:\Users\user\Documents\PrivateProject\DFIR\experiment_phase.json,P1 pre-attack observation

@@ -1,0 +1,14 @@
+timestamp_utc,scenario,event_type,layer,description
+2026-07-28T10:44:39.367Z,BASELINE,COLLECTION_STARTED,collector,First paired evidence record for BASELINE.
+2026-07-28T10:45:15.279Z,BASELINE,COLLECTION_ENDED,collector,Last paired evidence record for BASELINE.
+2026-07-28T11:51:12.628Z,PERLAKUAN_2_FLOOD,COLLECTION_STARTED,collector,First paired evidence record for PERLAKUAN_2_FLOOD.
+2026-07-28T11:51:12.628Z,PERLAKUAN_2_FLOOD,PHASE_PRE_ATTACK,collector,First paired record classified as phase PRE_ATTACK.
+2026-07-28T11:51:49.554Z,PERLAKUAN_2_FLOOD,PHASE_ATTACK,collector,First paired record classified as phase ATTACK.
+2026-07-28T11:51:50.924Z,PERLAKUAN_2_FLOOD,FIRST_CONFIGURED_MODBUS_WRITE,network,Modbus write to HR1024=1212.
+2026-07-28T11:51:51.354Z,PERLAKUAN_2_FLOOD,LAST_CONFIGURED_MODBUS_WRITE,network,Modbus write to HR1024=1212.
+2026-07-28T11:51:52.519Z,PERLAKUAN_2_FLOOD,FIRST_ATTACK_VALUE_OBSERVED,openplc,First cross-layer ODO mismatch with configured attack value; controller entered abnormal-usage path.
+2026-07-28T11:51:57.532Z,PERLAKUAN_2_FLOOD,LAST_ATTACK_VALUE_OBSERVED,openplc,Last observed configured attack value at OpenPLC.
+2026-07-28T11:51:58.523Z,PERLAKUAN_2_FLOOD,FIRST_NORMAL_OBSERVATION,cross_layer,First normal cross-layer ODO and valve observation after attack.
+2026-07-28T11:52:00.541Z,PERLAKUAN_2_FLOOD,STABLE_RECOVERY_CONFIRMED,cross_layer,Configured number of consecutive normal records reached.
+2026-07-28T11:52:38.235Z,PERLAKUAN_2_FLOOD,PHASE_POST_RECOVERY,collector,First paired record classified as phase POST_RECOVERY.
+2026-07-28T11:52:56.542Z,PERLAKUAN_2_FLOOD,COLLECTION_ENDED,collector,Last paired evidence record for PERLAKUAN_2_FLOOD.

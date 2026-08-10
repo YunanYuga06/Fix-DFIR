@@ -1,0 +1,18 @@
+{
+  "analysis_directory": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1\\analysis",
+  "case_root": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1",
+  "collector_session_id": "collector-20260718T122600Z-53c3e2f1",
+  "created_at_utc": "2026-07-18T20:19:29.612Z",
+  "experiment_id": "EXP-P1-01",
+  "master_file_count": 8,
+  "master_read_only": true,
+  "master_verification": "MATCH",
+  "operator": "Yunan Yuga Pratama",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "raw_file_count": 8,
+  "scenario": "PERLAKUAN_1_FDI",
+  "script": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\evidence\\PERLAKUAN_1_FDI\\collector-20260718T122600Z-53c3e2f1\\preservation\\preserve_case.py",
+  "source_verification": "MATCH",
+  "working_file_count": 8,
+  "working_verification": "MATCH"
+}

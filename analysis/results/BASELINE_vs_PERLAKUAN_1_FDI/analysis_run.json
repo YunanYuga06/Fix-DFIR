@@ -1,0 +1,23 @@
+{
+  "arguments": {
+    "attack_value": 1000,
+    "baseline_examination": null,
+    "correlation_window_seconds": 2.5,
+    "dfir_root": null,
+    "force": false,
+    "operator": "Yunan Yuga Pratama",
+    "output": null,
+    "stable_records": 3,
+    "target_register": 1024,
+    "treatment_examination": null
+  },
+  "completed_at_utc": "2026-07-18T20:21:43.577Z",
+  "host": "Youma-PC",
+  "operator": "Yunan Yuga Pratama",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "run_id": "analysis-20260718T202143Z-700e513f",
+  "script_path": "C:\\Users\\user\\Documents\\PrivateProject\\DFIR\\analysis\\analyze_testbed.py",
+  "script_sha256": "2a154ad99632cc4a2b521e84e7b463339a17a0d549c1376c310bee6c043a7c40",
+  "started_at_utc": "2026-07-18T20:21:43.483Z",
+  "status": "ANALYSIS_AND_INITIAL_REPORTING_COMPLETE"
+}
