@@ -29,7 +29,7 @@ except ImportError:
     from pymodbus.client.sync import ModbusTcpClient
 
 
-DEFAULT_OPENPLC_IP = "192.168.100.93"
+DEFAULT_OPENPLC_IP = "10.0.0.1"
 DEFAULT_OPENPLC_PORT = 502
 DEFAULT_UNIT_ID = 1
 DEFAULT_REGISTER = 1024

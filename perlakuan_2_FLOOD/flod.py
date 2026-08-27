@@ -2,7 +2,7 @@
 import socket
 import random
 
-SLAVE_IP = "192.168.21.209"
+SLAVE_IP = "10.0.0.1"
 REGISTER = 1024
 
 def build_write(addr, value):
